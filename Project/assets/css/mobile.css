@@ -1,0 +1,55 @@
+
+#what .items .item {
+  display:flex;
+  text-align: left;
+}
+
+#what .items .item i{
+  padding:2rem;
+  align-self: center;
+  margin-right:1rem;
+}
+
+#what .items{
+  flex-direction: column;
+}
+
+@media(max-width: 500px){
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar .logo{
+    text-align: center;
+  }
+
+  #navbar ul li a{
+    padding:1rem;
+  }
+
+  #who .info{
+    display:block;
+    text-align: center;
+  }
+  #who .info-left{
+    display:none;
+  }
+
+  #clients .clients-logo img{
+    width:80%;
+  }
+
+  #clients .clients-logo div:last-child{
+    display:none;
+  }
+
+  #contact{
+    flex-direction: column;
+  }
+
+  #contact .map{
+    height:200px;
+  }
+}

@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #7ab436;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: #93cb52;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  color: #f4f4f4;
+  display: block;
+  background: #93cb52;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  transition: background 0.5s ease;
+}
+
+.btn:hover {
+  background: #7ab436;
+  cursor: pointer;
+}
+
+.btn-dark {
+  color: #f4f4f4;
+  background: #333;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 2em;
+  overflow: hidden;
+}
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.bg-primary {
+  background: #93cb52;
+  color: #f4f4f4;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 1px dotted;
+}
+
+/* Navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  z-index: 1;
+}
+#navbar .logo {
+  padding-top: 0.3rem;
+}
+#navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+#navbar ul li {
+  border-radius: 5px;
+}
+#navbar ul li a {
+  color: #f4f4f4;
+  padding: 0.75rem;
+  display: block;
+
+  transition: background 0.5s ease;
+}
+
+#navbar ul li a:hover,
+#navbar ul li.selected {
+  border-radius: 5px;
+
+  background: #93cb52;
+}
+
+/* showcase */
+#product-showcase {
+  height: 50vh;
+  color: #f4f4f4;
+}
+#product-showcase.mac {
+  background: #333 url("/assets/img/refurb-mac-showcase.jpg") no-repeat center
+    center/cover;
+}
+#product-showcase.ipad {
+  background: #333 url("/assets/img/refurb-ipad-showcase.jpg") no-repeat center
+    center/cover;
+}
+
+#product-showcase.iphone {
+  background: #333 url("/assets/img/refurb-iphone-showcase.jpg") no-repeat
+    center center/cover;
+}
+
+#product-showcase.watch {
+  background: #333 url("/assets/img/refurb-watch-showcase.jpg") no-repeat center
+    center/cover;
+}
+
+#product-showcase.ipod {
+  background: #333 url("/assets/img/refurb-ipod-showcase.jpg") no-repeat center
+    center/cover;
+}
+#showcase {
+  background: #333 url("/assets/img/refurb-iphone.jpeg") no-repeat center
+    center/cover;
+  height: 100vh;
+  color: #f4f4f4;
+}
+#showcase-about {
+  background: #333 url("/assets/img/refurb-about.png") no-repeat center
+    center/cover;
+  height: 70vh;
+  color: #f4f4f4;
+}
+
+#showcase .showcase-content,
+#showcase-about .showcase-content,
+#product-showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+  /* Overlay */
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+/*Refurbished*/
+#collections {
+  padding: 4rem 0;
+}
+.items {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+#collections .items .item {
+  padding: 0 5rem;
+}
+#collections .items .item a {
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  transition: color 0.5s ease;
+}
+
+#collections .items .item:hover a {
+  color: #93cb52;
+}
+
+/*Featured*/
+#featured-products {
+  padding: 6rem 0;
+}
+#featured-products h2.m-heading {
+  padding-bottom: 2rem;
+}
+#featured-products .featured-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+#featured-products .featured-items img {
+  width: 100%;
+}
+
+#featured-products .featured-items .item {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#featured-products .featured-items .item a {
+  color: inherit;
+  transition: color 0.5s ease;
+}
+#featured-products .featured-items .item:hover a {
+  color: #93cb52;
+}
+#featured-products .featured-items .item a {
+  color: inherit;
+}
+/* What We DO */
+
+#what .items {
+  display: flex;
+  padding: 1rem;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+#who .info {
+  display: flex;
+}
+
+#who .info .info-left,
+#who .info .info-right {
+  flex: 1;
+}
+
+#who .info .info-left {
+  background: url("/assets/img/people.jpg") no-repeat center center/cover;
+}
+
+/* Section: Clients */
+
+#clients .clients-logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clients .clients-logo img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+/* Contact */
+
+#contact {
+  height: 80vh;
+  display: flex;
+}
+
+#contact .contact-form,
+#contact .map {
+  flex: 1;
+}
+
+#contact .contact-form h1,
+#contact .contact-form p {
+  margin-left: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.5rem;
+}
+
+#contact .contact-form .btn {
+  width: 40%;
+  padding: 1.3rem;
+  margin: auto;
+}
+
+#contact .contact-form input:focus {
+  outline: none;
+}
+#contact .contact-form textarea {
+  height: 6rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.as-producttiles {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+}
+
+html.js .as-util-relatedlink {
+  cursor: pointer;
+}
+
+.as-producttile {
+  background: #fff;
+  border-color: #d6d6d6;
+  border-width: 0 1px 1px 0;
+  box-sizing: border-box;
+  padding: 60px 0 76px;
+  width: 33.33333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.as-producttile-info,
+.as-producttile-tilehero {
+  padding: 0 15%;
+}
+
+.as-producttile-image {
+  height: auto;
+  width: 100%;
+}
+.as-producttile-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+}
+
+fieldset,
+iframe,
+img {
+  border: 0;
+}
+
+.as-producttile-info,
+.as-producttile-tilehero {
+  padding: 0 15%;
+}
+.as-gridpage-results .as-producttile-title {
+  max-width: 247px;
+  display: block;
+  margin: 0 auto;
+}
+.as-producttile-title {
+  line-height: 0;
+  text-align: center;
+}
+
+.as-producttile-tilelink {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.021em;
+  font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  color: #111;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.as-producttile-tilelink:hover {
+  color: #93cb52;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+.as-price-currentprice {
+  display: block;
+  margin: 8px 0 -6px;
+}
+
+.as-producttile-currentprice {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  margin-top: 7px;
+}
+.as-price-currentprice {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: SF Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue,
+    Helvetica, Arial, sans-serif;
+  display: inline-block;
+  color: #111;
+}
+
+.add-to-cart {
+  width: 50%;
+  margin: auto;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  min-width: 28px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 980px;
+  background: #0071e3;
+  color: #fff;
+  transition: background 0.5s ease;
+}
+.add-to-cart:hover {
+  background: #0359af;
+}
+
+#product-container .container {
+  display: flex;
+  justify-content: space-between;
+}
+#product-container .item-details {
+  width: 30%;
+}
+#product-container .item-image {
+  width: 50%;
+}
+#product-container .item-image img {
+  width: 100%;
+}
+
+#sign-up form {
+  width: 400px;
+}
+#sign-up form h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+#sign-up form label input {
+  float: right;
+  width: 200px;
+  background-color: #e9eced;
+  border: 1px solid black;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+#sign-up form label input:hover {
+  background: #fff;
+}
+
+#sign-up form .btnContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#sign-up form .btnContainer input,
+#sign-up form .btnContainer button {
+  width: 80px;
+  cursor: pointer;
+}
+#sign-up {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  background: url("/assets/img/apple-signup-showcase.jpg") no-repeat center
+    center/cover;
+  position: relative;
+  flex-direction: column;
+}
+#demo {
+  color: white;
+  z-index: 2;
+}
+
+#sign-up:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+#sign-up form #submitBtn {
+  margin-right: 20px;
+}
+
+#sign-up form {
+  background-color: #93cb52;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  z-index: 2;
+}
